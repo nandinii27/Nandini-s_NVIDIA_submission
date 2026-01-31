@@ -2,9 +2,6 @@
 
 **Project Name:** TINS-LABS (Topology-Informed Neural Seeding for LABS)  
 **Team Name:** Schrodingers Qat
-**GitHub Repository:** 
-
----
 
 ## 2. The Architecture
 **Owner:** Project Lead
