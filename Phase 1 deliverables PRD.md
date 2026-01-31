@@ -13,7 +13,7 @@
 * **Motivation (Scientific Risk):** 
   - DCQO achieves 6x circuit depth reduction over QAOA (Hegade et al., PRR 2022), enabling practical GPU simulation at N=32+
   - The Kipu QE-MTS paper (Cadavid et al., 2025) demonstrated O(1.24^N) scaling using energy-ranked quantum seeds
-  - **Our hypothesis:** Quantum samples encode richer landscape information than energy alone. By extracting topological structure (basin connectivity) and learned features (GNN-predicted MTS success), we can achieve better seed curation than naive energy ranking.
+  - **my hypothesis:** Quantum samples encode richer landscape information than energy alone. By extracting topological structure (basin connectivity) and learned features (GNN-predicted MTS success), we can achieve better seed curation than naive energy ranking.
   - **Risk acknowledged:** This is untested for LABS. The landscape may be too rugged for learned seeding to help. A valid negative result would still contribute to understanding hybrid quantum-classical optimization.
 
 ### Novel Contribution: Topology-Informed Neural Seeding (TINS)
@@ -46,7 +46,7 @@ DCQO Samples → TDA Basin Analysis → GNN Quality Prediction → Diverse Seed 
 |-----------|-----------|
 | **Hegade et al., "Digitized-Counterdiabatic Quantum Optimization", PRR 2022** | Foundation for DCQO algorithm. Demonstrates polynomial enhancement over adiabatic QO with 2-local CD terms. We adopt their circuit structure. |
 | **Cadavid et al., "Scaling advantage with quantum-enhanced memetic tabu search for LABS", arXiv:2511.04553 (2025)** | Direct predecessor. Establishes QE-MTS baseline with O(1.24^N) scaling. We extend their pipeline with intelligent seed selection. |
-| **Schuetz et al., "Combinatorial Optimization with Physics-Inspired GNNs", Nature Machine Intelligence 2022** | Shows GNNs can solve QUBO/PUBO (which includes LABS) by treating Hamiltonian as differentiable loss. Informs our GNN architecture. |
+| **Schuetz et al., "Combinatorial Optimization with Physics-Inspired GNNs", Nature Machine Intelligence 2022** | Shows GNNs can solve QUBO/PUBO (which includes LABS) by treating Hamiltonian as differentiable loss. Informs GNN architecture. |
 | **Cappart et al., "Combinatorial Optimization and Reasoning with GNNs", JMLR 2023** | Comprehensive survey on GNN+local search hybridization. Key insight: GNNs can generate diverse candidates that seed classical search via hindsight loss. |
 | **Lloyd et al., "Quantum algorithms for topological and geometric analysis of data", Nature Communications 2016** | Foundational quantum TDA paper. Establishes that persistent homology reveals multi-scale topological features. We apply classically to quantum samples. |
 | **Karimi-Mamaghan et al., "ML at the Service of Meta-heuristics", EJOR 2022** | Taxonomy of ML integration points in metaheuristics: initialization, fitness evaluation, evolution. TINS targets the initialization phase. |
@@ -298,12 +298,7 @@ Here are the direct links to all referenced papers:
 [https://iopscience.iop.org/article/10.1088/1751-8113/49/20/205001](https://iopscience.iop.org/article/10.1088/1751-8113/49/20/205001)  
 **arXiv**: [https://arxiv.org/abs/1601.02012](https://arxiv.org/abs/1601.02012)
 
-***
 
-**Most important for your LABS work**: 
-- **Cadavid et al. (arXiv:2511.04553)** ← Direct QE-MTS baseline
-- **Hegade et al. (PRR 2022)** ← DCQO algorithm foundation
-- **Schuetz et al. (Nature MI 2022)** ← GNN physics inspiration
 
 
 
